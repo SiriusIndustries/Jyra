@@ -1,0 +1,54 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cam.sirius.jyra</groupId>
+    <artifactId>jyra-root</artifactId>
+    <version>1.0</version>
+
+    <packaging>pom</packaging>
+    <name>cam.sirius.jyra</name>
+    <description>TeaVM and GraalVM bindings for Lyra by Google (https://github.com/google/lyra).</description>
+
+    <modules>
+        <module>cam.sirius.jyra.teavm</module>
+        <module>cam.sirius.jyra.graalvm</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <java.version>17</java.version>
+        <lombok.version>1.18.26</lombok.version>
+
+        <maven.compiler.release>${java.version}</maven.compiler.release>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Central Repository</name>
+            <url>https://repo1.maven.org/maven2/</url>
+        </repository>
+        <repository>
+            <id>sonatype</id>
+            <name>Sonatype Repository</name>
+            <url>https://oss.sonatype.org/content/repositories/releases/</url>
+        </repository>
+        <repository>
+            <id>jitpack</id>
+            <name>JitPack Repository</name>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+</project>
